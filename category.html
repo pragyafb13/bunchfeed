@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Categories — BunchFeed</title>
+  <meta name="description" content="Browse all articles on BunchFeed by category: Travel, Lifestyle, Finance, Health, and Tech." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="site-logo">Bunch<span>Feed</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="nav-dropdown">
+            <a href="category.html" class="active">Category</a>
+            <div class="nav-dropdown-menu">
+              <a href="category.html?cat=travel"><span class="cat-dot" style="background:var(--cat-travel)"></span> Travel</a>
+              <a href="category.html?cat=lifestyle"><span class="cat-dot" style="background:var(--cat-lifestyle)"></span> Lifestyle</a>
+              <a href="category.html?cat=finance"><span class="cat-dot" style="background:var(--cat-finance)"></span> Finance</a>
+              <a href="category.html?cat=health"><span class="cat-dot" style="background:var(--cat-health)"></span> Health</a>
+            </div>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+            </svg>
+          </button>
+          <a href="#" class="nav-signin">Sign In</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="category.html">Category</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </header>
+
+  <div class="search-overlay" role="dialog">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+        </svg>
+        <input type="text" placeholder="Search articles, topics..." autocomplete="off" />
+        <button class="search-close">ESC</button>
+      </div>
+      <div class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="category-hero">
+    <div class="container">
+      <div class="category-hero-inner">
+        <div>
+          <div class="section-label" style="color:rgba(255,255,255,.45)">Browse</div>
+          <h1 style="color:#fff">All Articles</h1>
+        </div>
+        <span class="count-badge">34 articles</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <div style="background:#fff;border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div class="category-filters">
+        <button class="filter-btn active" data-filter="all">All Topics</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+        <button class="filter-btn" data-filter="health">Health</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Articles grid -->
+  <section class="section">
+    <div class="container">
+      <div class="posts-grid-3 stagger" id="articles-grid">
+
+        <!-- TRAVEL -->
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=75&auto=format&fit=crop" alt="Digital nomad" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-digital-nomad.html"><h3 class="post-card-title">How to Become a Digital Nomad in 2026: The Complete Transition Guide</h3></a>
+            <p class="post-card-excerpt">Visa options, income stability, gear essentials, and the honest psychological realities of full-time location-independent work.</p>
+            <div class="post-card-meta"><span>Mar 18, 2026</span><span class="read-time">15 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=600&q=75&auto=format&fit=crop" alt="Solo travel" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-solo-travel.html"><h3 class="post-card-title">Solo Travel in 2026: Safety, Logistics, and Making It Genuinely Enjoyable</h3></a>
+            <p class="post-card-excerpt">Solo travel is significantly more manageable than its reputation suggests. A practical guide for first-timers and experienced solo travellers alike.</p>
+            <div class="post-card-meta"><span>Mar 20, 2026</span><span class="read-time">13 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=75&auto=format&fit=crop" alt="Bali rice terraces" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-bali-month.html"><h3 class="post-card-title">A Month in Bali: Honest Costs, Best Areas, and What Nobody Tells You</h3></a>
+            <p class="post-card-excerpt">Where you stay and how you move determines whether you spend $900 or $3,500 for the same month. A breakdown of real costs by zone.</p>
+            <div class="post-card-meta"><span>Mar 05, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?w=600&q=75&auto=format&fit=crop" alt="Machu Picchu" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-machu-picchu.html"><h3 class="post-card-title">Complete Guide to Machu Picchu: Tickets, Routes, and What to Expect</h3></a>
+            <p class="post-card-excerpt">Peru's ticketing system changed significantly in 2023. A current breakdown of entry requirements, route options, and realistic costs for 2026.</p>
+            <div class="post-card-meta"><span>Mar 01, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1474487548417-781cb6d646b3?w=600&q=75&auto=format&fit=crop" alt="Interrail Europe" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-europe-interrail.html"><h3 class="post-card-title">Europe by Interrail: The Definitive Planning Guide for 2026</h3></a>
+            <p class="post-card-excerpt">Interrail remains one of Europe's best-value travel products when used correctly. Pass types, reservation systems, and route strategies covered in full.</p>
+            <div class="post-card-meta"><span>Feb 14, 2026</span><span class="read-time">16 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=75&auto=format&fit=crop" alt="Morocco medina" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-morocco-guide.html"><h3 class="post-card-title">Morocco Travel Guide: Medinas, Mountains, and How to Navigate Both</h3></a>
+            <p class="post-card-excerpt">From the blue streets of Chefchaouen to the sand dunes of Merzouga — a comprehensive, practical guide to travelling Morocco in 2026.</p>
+            <div class="post-card-meta"><span>Mar 08, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=75&auto=format&fit=crop" alt="Tokyo city guide" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-tokyo-guide.html"><h3 class="post-card-title">First-Timer's Guide to Tokyo: Transport, Food, and Where to Stay</h3></a>
+            <p class="post-card-excerpt">IC cards, konbini meals, and free district walking make Tokyo one of the world's most accessible major cities for budget-conscious travellers.</p>
+            <div class="post-card-meta"><span>Feb 20, 2026</span><span class="read-time">15 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=600&q=75&auto=format&fit=crop" alt="African safari" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-safari-guide.html"><h3 class="post-card-title">African Safari Guide: Planning, Costs, and Choosing the Right Country</h3></a>
+            <p class="post-card-excerpt">Kenya, Tanzania, Botswana, or South Africa — each offers a meaningfully different safari experience. A frank comparison of what each delivers and what it costs.</p>
+            <div class="post-card-meta"><span>Feb 02, 2026</span><span class="read-time">17 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=75&auto=format&fit=crop" alt="Viator budget tours" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-viator.html"><h3 class="post-card-title">Budget Friendly Tours on Viator: Under $500 for Every Traveller</h3></a>
+            <p class="post-card-excerpt">Viator's catalogue of affordable tours covers Paris, Bali, Dubai, and dozens more destinations — all under $500 with the right booking approach.</p>
+            <div class="post-card-meta"><span>Nov 12, 2025</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=75&auto=format&fit=crop" alt="Turo car rental" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-turo.html"><h3 class="post-card-title">Airport Car Rentals With Turo: The Complete 2026 Guide</h3></a>
+            <p class="post-card-excerpt">How Turo works at airports, what to inspect before accepting a vehicle, and a detailed comparison of insurance options and cost tiers.</p>
+            <div class="post-card-meta"><span>Jan 23, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=600&q=75&auto=format&fit=crop" alt="Cruise ship travel" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-cruise-guide.html"><h3 class="post-card-title">First Cruise Guide: Choosing a Line, Understanding Costs, and What to Expect</h3></a>
+            <p class="post-card-excerpt">Cruise pricing is deliberately opaque. A clear breakdown of all-in costs, what to book in advance, and how different cruise lines actually compare.</p>
+            <div class="post-card-meta"><span>Jan 15, 2026</span><span class="read-time">15 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=75&auto=format&fit=crop" alt="Budget Europe travel" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-budget-europe.html"><h3 class="post-card-title">Travelling Europe on a Budget: What $60 a Day Actually Gets You</h3></a>
+            <p class="post-card-excerpt">Budget travel in Europe varies enormously by country. An honest look at daily costs in Western vs Eastern Europe and where the genuine value lies.</p>
+            <div class="post-card-meta"><span>Jan 08, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=75&auto=format&fit=crop" alt="Travel hacks packing" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-travel-hacks.html"><h3 class="post-card-title">Travel Hacks That Actually Work: 40 Techniques From Frequent Flyers</h3></a>
+            <p class="post-card-excerpt">Filtered down from the noise: the packing strategies, booking windows, and airport behaviours that consistently save time and money.</p>
+            <div class="post-card-meta"><span>Dec 20, 2025</span><span class="read-time">13 min read</span></div>
+          </div>
+        </article>
+
+        <!-- LIFESTYLE -->
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75&auto=format&fit=crop" alt="Morning routine" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-morning-routine.html"><h3 class="post-card-title">Building a Morning Routine That Actually Sticks: A Science-Based Approach</h3></a>
+            <p class="post-card-excerpt">Habit formation research points to a handful of principles that determine whether a routine survives contact with real life. Most productivity advice ignores them.</p>
+            <div class="post-card-meta"><span>Feb 10, 2026</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=75&auto=format&fit=crop" alt="Home office setup" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-home-office.html"><h3 class="post-card-title">Home Office Setup: What Actually Matters for Sustained Productivity</h3></a>
+            <p class="post-card-excerpt">Most home office guides recommend the same expensive gear. A practical look at what actually affects output quality and where the marginal improvements are largest.</p>
+            <div class="post-card-meta"><span>Mar 03, 2026</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=75&auto=format&fit=crop" alt="Capsule wardrobe" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-capsule-wardrobe.html"><h3 class="post-card-title">Building a Capsule Wardrobe: A Practical System That Works for Real Life</h3></a>
+            <p class="post-card-excerpt">The capsule wardrobe concept is routinely over-aestheticised. The functional principles that actually reduce decision fatigue and clothing spend.</p>
+            <div class="post-card-meta"><span>Jan 30, 2026</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=75&auto=format&fit=crop" alt="Meal prep" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-meal-prep.html"><h3 class="post-card-title">Meal Prep That Works: A System for Weeknight Cooking Without Sunday Burnout</h3></a>
+            <p class="post-card-excerpt">Most meal prep systems collapse within three weeks. The design principles behind prep routines that actually continue past the initial motivation phase.</p>
+            <div class="post-card-meta"><span>Feb 12, 2026</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=75&auto=format&fit=crop" alt="Reading habit" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-reading-habit.html"><h3 class="post-card-title">Building a Reading Habit: How to Read More Without Forcing It</h3></a>
+            <p class="post-card-excerpt">The people who read most are not those with the most discipline — they have designed their environment and selection criteria differently. What actually works.</p>
+            <div class="post-card-meta"><span>Jan 25, 2026</span><span class="read-time">10 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75&auto=format&fit=crop" alt="Decluttering home" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-declutter.html"><h3 class="post-card-title">Decluttering Your Home: A Room-by-Room System That Sticks</h3></a>
+            <p class="post-card-excerpt">Decluttering stalls because most approaches address physical objects without addressing the decision fatigue and attachment mechanisms that created the clutter.</p>
+            <div class="post-card-meta"><span>Feb 05, 2026</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=75&auto=format&fit=crop" alt="Coffee guide" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-coffee-guide.html"><h3 class="post-card-title">The Home Coffee Guide: Brewing Methods, Grinders, and What's Worth Buying</h3></a>
+            <p class="post-card-excerpt">The gap between cafe coffee and home coffee is smaller than most people think. What equipment choices actually affect the cup and what is marketing noise.</p>
+            <div class="post-card-meta"><span>Jan 18, 2026</span><span class="read-time">13 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=600&q=75&auto=format&fit=crop" alt="Minimalism guide" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-minimalism.html"><h3 class="post-card-title">Minimalism as a Practice: Beyond the Aesthetic, Into the Useful</h3></a>
+            <p class="post-card-excerpt">Minimalism has been aestheticised to the point of uselessness. A practical look at what the underlying principles actually offer and how to apply them without the dogma.</p>
+            <div class="post-card-meta"><span>Dec 15, 2025</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=75&auto=format&fit=crop" alt="Bedding guide" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-bedding-guide.html"><h3 class="post-card-title">Rest Bedding Buying Guide for Beginners: Sleep Better Starting Tonight</h3></a>
+            <p class="post-card-excerpt">Thread count is just the beginning. A complete guide to every factor that determines how well your bedding performs — from fibre type to weave structure.</p>
+            <div class="post-card-meta"><span>Jan 12, 2026</span><span class="read-time">16 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=75&auto=format&fit=crop" alt="Top bedding products" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-bedding-top5.html"><h3 class="post-card-title">Top 5 Rest Bedding Products You Should Try in 2026</h3></a>
+            <p class="post-card-excerpt">After testing dozens of sheets, duvets, and pillows, five Rest products that consistently deliver on quality without overcomplicating the decision.</p>
+            <div class="post-card-meta"><span>Dec 05, 2025</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <!-- FINANCE -->
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=75&auto=format&fit=crop" alt="Travel credit cards" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-travel-credit-cards.html"><h3 class="post-card-title">Travel Credit Cards Worth Carrying: A No-Nonsense Comparison for 2026</h3></a>
+            <p class="post-card-excerpt">The maths on annual fee payback, lounge access value, and foreign transaction savings — done properly so you can make a genuinely informed choice.</p>
+            <div class="post-card-meta"><span>Feb 28, 2026</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=75&auto=format&fit=crop" alt="Points and miles" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-points-miles.html"><h3 class="post-card-title">Points and Miles Explained: How to Earn More and Actually Use Them</h3></a>
+            <p class="post-card-excerpt">Frequent flyer programmes are confusing by design. A plain-language breakdown of how airline and hotel points work and which redemptions deliver real value.</p>
+            <div class="post-card-meta"><span>Feb 08, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=75&auto=format&fit=crop" alt="House deposit savings" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-house-saving.html"><h3 class="post-card-title">Saving for a House Deposit: A Realistic Timeline and What to Cut</h3></a>
+            <p class="post-card-excerpt">A structured approach to building a deposit on a realistic income — including which accounts to use, how to automate savings, and what timeline is genuinely achievable.</p>
+            <div class="post-card-meta"><span>Mar 15, 2026</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=75&auto=format&fit=crop" alt="Freelance finance" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-freelance-finance.html"><h3 class="post-card-title">Freelance Finance: Managing Irregular Income Without Anxiety</h3></a>
+            <p class="post-card-excerpt">Variable income is manageable with the right systems. A practical framework for separating business and personal finances and planning through dry patches.</p>
+            <div class="post-card-meta"><span>Feb 22, 2026</span><span class="read-time">13 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=75&auto=format&fit=crop" alt="Emergency fund" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-emergency-fund.html"><h3 class="post-card-title">Building an Emergency Fund: How Much Is Enough and Where to Keep It</h3></a>
+            <p class="post-card-excerpt">Three months or six? Current account or high-yield savings? The emergency fund questions that most personal finance content handles poorly — answered properly.</p>
+            <div class="post-card-meta"><span>Feb 25, 2026</span><span class="read-time">9 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=75&auto=format&fit=crop" alt="Side income streams" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-side-income.html"><h3 class="post-card-title">Building a Side Income: What Works, What Doesn't, and How Long It Takes</h3></a>
+            <p class="post-card-excerpt">The income figures in side-hustle content are almost always misleading. A realistic look at which approaches produce meaningful returns and what they actually demand.</p>
+            <div class="post-card-meta"><span>Mar 10, 2026</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <!-- HEALTH -->
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1541480601022-2308c0f02487?w=600&q=75&auto=format&fit=crop" alt="Sleep optimisation" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-sleep-optimization.html"><h3 class="post-card-title">Optimising Sleep for Performance: What the Research Actually Supports</h3></a>
+            <p class="post-card-excerpt">Sleep science has advanced considerably. A practical breakdown of what interventions have genuine evidence behind them and what is wellness-industry noise.</p>
+            <div class="post-card-meta"><span>Mar 12, 2026</span><span class="read-time">13 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=75&auto=format&fit=crop" alt="Travel fitness" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-travel-fitness.html"><h3 class="post-card-title">Staying Fit While Travelling: Training Without a Gym and Eating Well on the Road</h3></a>
+            <p class="post-card-excerpt">Consistent training while travelling is achievable with a different approach than a fixed gym routine demands. Practical strategies for maintaining condition on the move.</p>
+            <div class="post-card-meta"><span>Mar 10, 2026</span><span class="read-time">10 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=75&auto=format&fit=crop" alt="Eating well while travelling" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-travel-diet.html"><h3 class="post-card-title">Eating Well on the Road: Nutrition Strategies for Long-Term Travellers</h3></a>
+            <p class="post-card-excerpt">Long-term travel creates specific nutritional challenges. A practical framework for maintaining a reasonable diet across varied food environments and travel schedules.</p>
+            <div class="post-card-meta"><span>Mar 15, 2026</span><span class="read-time">10 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=75&auto=format&fit=crop" alt="Jet lag recovery" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-jet-lag.html"><h3 class="post-card-title">Beating Jet Lag: Evidence-Based Strategies for Long-Haul Travellers</h3></a>
+            <p class="post-card-excerpt">Light exposure timing, melatonin dosing, and strategic sleep scheduling — a practical guide to recovering faster after long-haul flights, based on circadian science.</p>
+            <div class="post-card-meta"><span>Feb 18, 2026</span><span class="read-time">10 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75&auto=format&fit=crop" alt="Managing travel stress" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-stress-management.html"><h3 class="post-card-title">Managing Travel Stress and Avoiding Burnout on Long Trips</h3></a>
+            <p class="post-card-excerpt">Travel burnout is predictable in its causes and largely preventable with modest planning adjustments. What drives it and how to recognise it before it takes hold.</p>
+            <div class="post-card-meta"><span>Mar 24, 2026</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination reveal">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span class="page-dots">...</span>
+        <button class="page-btn">12</button>
+        <button class="page-btn" style="width:auto;padding:0 14px">Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="subscriber-count">
+          <div class="sub-avatars"><span></span><span></span><span></span></div>
+          <span class="sub-count-text">Join <strong>70,000+</strong> subscribers</span>
+        </div>
+        <h2>Stay Informed. Stay Ahead.</h2>
+        <p>Get the best articles on travel, lifestyle, and finance delivered straight to your inbox every week.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe Now</button>
+        </form>
+        <p class="newsletter-note">By subscribing, you agree to our <a href="#" style="color:rgba(255,255,255,.5);text-decoration:underline">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">Bunch<span>Feed</span></a>
+          <p>BunchFeed is an independent editorial platform dedicated to travel, lifestyle, and finance.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">X</a>
+            <a href="#" class="social-link">In</a>
+            <a href="#" class="social-link">Fb</a>
+            <a href="#" class="social-link">Pt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="category.html">All Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="category.html?cat=travel">Travel</a></li>
+            <li><a href="category.html?cat=lifestyle">Lifestyle</a></li>
+            <li><a href="category.html?cat=finance">Finance</a></li>
+            <li><a href="category.html?cat=health">Health</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="#">Write for Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>All rights reserved &copy; BunchFeed 2026</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
