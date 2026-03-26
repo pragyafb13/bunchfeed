@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — BunchFeed</title>
+  <meta name="description" content="BunchFeed is an independent editorial platform founded on one belief: good information should be accessible to everyone." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="site-logo">Bunch<span>Feed</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li class="nav-dropdown">
+            <a href="category.html">Category</a>
+            <div class="nav-dropdown-menu">
+              <a href="category.html?cat=travel"><span class="cat-dot" style="background:var(--cat-travel)"></span> Travel</a>
+              <a href="category.html?cat=lifestyle"><span class="cat-dot" style="background:var(--cat-lifestyle)"></span> Lifestyle</a>
+              <a href="category.html?cat=finance"><span class="cat-dot" style="background:var(--cat-finance)"></span> Finance</a>
+              <a href="category.html?cat=health"><span class="cat-dot" style="background:var(--cat-health)"></span> Health</a>
+            </div>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+            </svg>
+          </button>
+          <a href="#" class="nav-signin">Sign In</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="category.html">Category</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </header>
+
+  <div class="search-overlay" role="dialog" aria-label="Search">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+        </svg>
+        <input type="text" placeholder="Search articles, topics..." autocomplete="off" />
+        <button class="search-close">ESC</button>
+      </div>
+      <div class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>We Write for People Who Ask Questions</h1>
+      <p>BunchFeed is an independent editorial platform built on one belief: practical, well-researched information should be free and accessible to everyone.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop" alt="Team working" />
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-label">Our Mission</div>
+          <h2>Journalism That Respects Your Time</h2>
+          <p>We started BunchFeed because we were tired of reading articles padded with filler, affiliate links dressed up as editorial, and advice written by people who had never actually done the thing they were recommending.</p>
+          <p>Every piece published on BunchFeed is written by someone with first-hand knowledge of the subject. Our travel guides are written by travellers. Our finance articles come from people who have managed real budgets in real situations. Our lifestyle content reflects actual experience, not press releases.</p>
+          <p>We do accept affiliate partnerships — transparency matters to us, so we disclose them clearly. But our editorial decisions are never shaped by commercial relationships. If a product or service is not genuinely useful, we won't cover it.</p>
+          <a href="category.html" class="btn btn-primary" style="margin-top:8px;width:fit-content">Read Our Work</a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-grid reveal" style="margin-top:80px">
+        <div class="stat-item">
+          <div class="stat-number" data-count="70000" data-suffix="+">0</div>
+          <div class="stat-label">Monthly Readers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="400" data-suffix="+">0</div>
+          <div class="stat-label">Articles Published</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="5">0</div>
+          <div class="stat-label">Years Running</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="18">0</div>
+          <div class="stat-label">Contributors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">How We Work</div>
+          <h2>Editorial Standards</h2>
+        </div>
+      </div>
+
+      <div class="posts-grid-3 stagger">
+        <div class="sidebar-widget" style="border:1px solid var(--border-light);background:#fff;">
+          <div style="width:44px;height:44px;border-radius:var(--radius-md);background:var(--primary);display:flex;align-items:center;justify-content:center;margin-bottom:18px">
+            <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h4 style="font-size:1.08rem;margin-bottom:10px">Fact-Checked</h4>
+          <p style="font-size:.9rem;color:var(--text-muted);margin:0;line-height:1.7">All factual claims are checked against primary sources before publication. Statistics are cited and linked.</p>
+        </div>
+        <div class="sidebar-widget" style="border:1px solid var(--border-light);background:#fff;">
+          <div style="width:44px;height:44px;border-radius:var(--radius-md);background:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:18px">
+            <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          </div>
+          <h4 style="font-size:1.08rem;margin-bottom:10px">Transparent</h4>
+          <p style="font-size:.9rem;color:var(--text-muted);margin:0;line-height:1.7">Affiliate relationships and sponsored content are always clearly disclosed, never blended into editorial copy.</p>
+        </div>
+        <div class="sidebar-widget" style="border:1px solid var(--border-light);background:#fff;">
+          <div style="width:44px;height:44px;border-radius:var(--radius-md);background:var(--cat-lifestyle);display:flex;align-items:center;justify-content:center;margin-bottom:18px">
+            <svg width="22" height="22" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </div>
+          <h4 style="font-size:1.08rem;margin-bottom:10px">First-Hand Knowledge</h4>
+          <p style="font-size:.9rem;color:var(--text-muted);margin:0;line-height:1.7">Writers cover topics they have direct experience with. We don't publish listicles assembled from other listicles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">The People</div>
+          <h2>Our Core Team</h2>
+        </div>
+      </div>
+
+      <div class="team-grid stagger">
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format&fit=crop&face" alt="Sarah Chen" />
+          <div class="team-name">Sarah Chen</div>
+          <div class="team-role">Editor-in-Chief</div>
+          <p class="team-bio">Sarah has spent 11 years in digital media. She oversees all editorial direction and has personally visited 47 countries, which influences how BunchFeed covers travel.</p>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop&face" alt="James Okonkwo" />
+          <div class="team-name">James Okonkwo</div>
+          <div class="team-role">Head of Finance Content</div>
+          <p class="team-bio">A former financial analyst turned writer, James covers budgeting, travel finance, and consumer spending with a focus on practical, actionable guidance.</p>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&face" alt="Priya Nair" />
+          <div class="team-name">Priya Nair</div>
+          <div class="team-role">Lifestyle Editor</div>
+          <p class="team-bio">Priya covers home, wellness, and product reviews with a rigorously research-driven approach. Her bedding and sleep content consistently ranks among our most-read articles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" style="background:var(--bg-secondary);padding-top:64px;padding-bottom:64px">
+    <div class="container">
+      <div style="max-width:600px;margin:0 auto;text-align:center" class="reveal">
+        <div class="section-label" style="justify-content:center">Get in Touch</div>
+        <h2 style="margin-bottom:16px">Work With Us</h2>
+        <p style="margin-bottom:32px">We accept guest contributions, advertising partnerships, and editorial pitches. If your work meets our standards, we'd like to hear from you.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="#" class="btn btn-primary">Submit a Pitch</a>
+          <a href="#" class="btn btn-outline">Advertise With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="subscriber-count">
+          <div class="sub-avatars"><span></span><span></span><span></span></div>
+          <span class="sub-count-text">Join <strong>70,000+</strong> subscribers</span>
+        </div>
+        <h2>Stay Informed. Stay Ahead.</h2>
+        <p>Get the best articles on travel, lifestyle, and finance delivered straight to your inbox every week.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe Now</button>
+        </form>
+        <p class="newsletter-note">By subscribing, you agree to our <a href="#" style="color:rgba(255,255,255,.5);text-decoration:underline">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">Bunch<span>Feed</span></a>
+          <p>BunchFeed is an independent editorial platform dedicated to travel, lifestyle, and finance.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">X</a>
+            <a href="#" class="social-link">In</a>
+            <a href="#" class="social-link">Fb</a>
+            <a href="#" class="social-link">Pt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="category.html">All Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="category.html?cat=travel">Travel</a></li>
+            <li><a href="category.html?cat=lifestyle">Lifestyle</a></li>
+            <li><a href="category.html?cat=finance">Finance</a></li>
+            <li><a href="category.html?cat=health">Health</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="#">Write for Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>All rights reserved &copy; BunchFeed 2026</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

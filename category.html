@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Categories — BunchFeed</title>
+  <meta name="description" content="Browse all articles on BunchFeed by category: Travel, Lifestyle, Finance, Health, and Tech." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="site-logo">Bunch<span>Feed</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="nav-dropdown">
+            <a href="category.html" class="active">Category</a>
+            <div class="nav-dropdown-menu">
+              <a href="category.html?cat=travel"><span class="cat-dot" style="background:var(--cat-travel)"></span> Travel</a>
+              <a href="category.html?cat=lifestyle"><span class="cat-dot" style="background:var(--cat-lifestyle)"></span> Lifestyle</a>
+              <a href="category.html?cat=finance"><span class="cat-dot" style="background:var(--cat-finance)"></span> Finance</a>
+              <a href="category.html?cat=health"><span class="cat-dot" style="background:var(--cat-health)"></span> Health</a>
+            </div>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-search-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+            </svg>
+          </button>
+          <a href="#" class="nav-signin">Sign In</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="category.html">Category</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </header>
+
+  <div class="search-overlay" role="dialog">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"/>
+        </svg>
+        <input type="text" placeholder="Search articles, topics..." autocomplete="off" />
+        <button class="search-close">ESC</button>
+      </div>
+      <div class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="category-hero">
+    <div class="container">
+      <div class="category-hero-inner">
+        <div>
+          <div class="section-label" style="color:rgba(255,255,255,.45)">Browse</div>
+          <h1 style="color:#fff">All Articles</h1>
+        </div>
+        <span class="count-badge">142 articles</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <div style="background:#fff;border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div class="category-filters">
+        <button class="filter-btn active" data-filter="all">All Topics</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+        <button class="filter-btn" data-filter="health">Health</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Articles grid -->
+  <section class="section">
+    <div class="container">
+      <div class="posts-grid-3 stagger" id="articles-grid">
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=75&auto=format&fit=crop" alt="Viator budget tours" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-viator.html"><h3 class="post-card-title">Budget Friendly Tours on Viator: Under $500 for Every Traveller</h3></a>
+            <p class="post-card-excerpt">Explore the world's top destinations without breaking the bank. Viator's catalogue covers Paris, Bali, Dubai, and dozens more.</p>
+            <div class="post-card-meta"><span>Nov 12, 2025</span><span class="read-time">12 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=75&auto=format&fit=crop" alt="Turo car rental" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-turo.html"><h3 class="post-card-title">Airport Car Rentals With Turo: The Complete 2026 Guide</h3></a>
+            <p class="post-card-excerpt">Everything you need to know about booking a car through Turo at the airport — how it works, costs, and what to watch out for.</p>
+            <div class="post-card-meta"><span>Jan 23, 2026</span><span class="read-time">14 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=75&auto=format&fit=crop" alt="Bedding guide" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-bedding-guide.html"><h3 class="post-card-title">Rest Bedding Buying Guide for Beginners: Sleep Better Starting Tonight</h3></a>
+            <p class="post-card-excerpt">Thread count is just the beginning. A complete guide to every factor that determines how well your bedding actually performs.</p>
+            <div class="post-card-meta"><span>Jan 12, 2026</span><span class="read-time">16 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=75&auto=format&fit=crop" alt="Top bedding products" />
+          </div>
+          <div class="post-card-body">
+            <a href="post-bedding-top5.html"><h3 class="post-card-title">Top 5 Rest Bedding Products You Should Try in 2026</h3></a>
+            <p class="post-card-excerpt">After testing dozens of sheets, duvets, and pillows, we narrowed down the five Rest products that genuinely improve sleep quality.</p>
+            <div class="post-card-meta"><span>Dec 05, 2025</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=75&auto=format&fit=crop" alt="Southeast Asia" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">How to Travel Southeast Asia for Under $3,000 — A 30-Day Itinerary</h3></a>
+            <p class="post-card-excerpt">Thailand, Vietnam, Cambodia, and Indonesia in a single month without blowing your budget. A practical day-by-day plan.</p>
+            <div class="post-card-meta"><span>Feb 08, 2026</span><span class="read-time">18 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="lifestyle">
+          <div class="post-card-image">
+            <span class="category-tag lifestyle">Lifestyle</span>
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=75&auto=format&fit=crop" alt="Remote work" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">The Remote Work Travel Playbook: 12 Cities That Actually Work</h3></a>
+            <p class="post-card-excerpt">Fast internet, affordable living, and a community of other remote workers — these 12 cities tick every box.</p>
+            <div class="post-card-meta"><span>Feb 14, 2026</span><span class="read-time">10 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=75&auto=format&fit=crop" alt="Travel insurance" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">Travel Insurance in 2026: What It Covers and When It's Worth Buying</h3></a>
+            <p class="post-card-excerpt">Most people buy the wrong policy or skip insurance entirely. This guide covers everything you need to make the right call before you book.</p>
+            <div class="post-card-meta"><span>Mar 01, 2026</span><span class="read-time">9 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=75&auto=format&fit=crop" alt="Sleep health" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">How Your Sleep Environment Affects Nutrition Choices the Following Day</h3></a>
+            <p class="post-card-excerpt">Sleep quality and dietary decisions are more directly linked than most people realise. Here's what the research actually says.</p>
+            <div class="post-card-meta"><span>Mar 10, 2026</span><span class="read-time">8 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="finance">
+          <div class="post-card-image">
+            <span class="category-tag finance">Finance</span>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=75&auto=format&fit=crop" alt="Savings plan" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">Building a Travel Fund From Zero: A 12-Month Savings Blueprint</h3></a>
+            <p class="post-card-excerpt">A structured, realistic savings plan that works on any income level — with specific targets, automation strategies, and no gimmicks.</p>
+            <div class="post-card-meta"><span>Mar 15, 2026</span><span class="read-time">11 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="travel">
+          <div class="post-card-image">
+            <span class="category-tag travel">Travel</span>
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=75&auto=format&fit=crop" alt="Maldives" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">The Maldives Without a Luxury Budget: What's Actually Possible</h3></a>
+            <p class="post-card-excerpt">Staying in the Maldives for under $150 a night is possible, and the experience is not as compromised as you might expect.</p>
+            <div class="post-card-meta"><span>Mar 18, 2026</span><span class="read-time">13 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="tech">
+          <div class="post-card-image">
+            <span class="category-tag tech">Tech</span>
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=75&auto=format&fit=crop" alt="Travel apps" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">The 9 Travel Apps Worth Having on Your Phone in 2026</h3></a>
+            <p class="post-card-excerpt">From currency conversion to offline maps, these apps have earned a permanent spot on every serious traveller's home screen.</p>
+            <div class="post-card-meta"><span>Mar 20, 2026</span><span class="read-time">7 min read</span></div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="health">
+          <div class="post-card-image">
+            <span class="category-tag health">Health</span>
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=75&auto=format&fit=crop" alt="Jet lag tips" />
+          </div>
+          <div class="post-card-body">
+            <a href="#"><h3 class="post-card-title">Managing Jet Lag: Science-Backed Strategies That Actually Work</h3></a>
+            <p class="post-card-excerpt">Light exposure timing, melatonin dosing, and strategic sleep scheduling — a practical guide to recovering faster after long-haul flights.</p>
+            <div class="post-card-meta"><span>Mar 22, 2026</span><span class="read-time">9 min read</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination reveal">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span class="page-dots">...</span>
+        <button class="page-btn">12</button>
+        <button class="page-btn" style="width:auto;padding:0 14px">Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="subscriber-count">
+          <div class="sub-avatars"><span></span><span></span><span></span></div>
+          <span class="sub-count-text">Join <strong>70,000+</strong> subscribers</span>
+        </div>
+        <h2>Stay Informed. Stay Ahead.</h2>
+        <p>Get the best articles on travel, lifestyle, and finance delivered straight to your inbox every week.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe Now</button>
+        </form>
+        <p class="newsletter-note">By subscribing, you agree to our <a href="#" style="color:rgba(255,255,255,.5);text-decoration:underline">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">Bunch<span>Feed</span></a>
+          <p>BunchFeed is an independent editorial platform dedicated to travel, lifestyle, and finance.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">X</a>
+            <a href="#" class="social-link">In</a>
+            <a href="#" class="social-link">Fb</a>
+            <a href="#" class="social-link">Pt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="category.html">All Categories</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="category.html?cat=travel">Travel</a></li>
+            <li><a href="category.html?cat=lifestyle">Lifestyle</a></li>
+            <li><a href="category.html?cat=finance">Finance</a></li>
+            <li><a href="category.html?cat=health">Health</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="#">Write for Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>All rights reserved &copy; BunchFeed 2026</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
