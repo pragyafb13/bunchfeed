@@ -80,6 +80,146 @@ window.ThriveMag = window.ThriveMag || {};
       category: "Money",
       excerpt: "Compound interest, index funds, and Roth IRAs — explained for beginners.",
       readTime: "11 min read"
+    },
+    {
+      title: "How to Negotiate Your Salary (And Actually Win)",
+      url: "post-salary-negotiation.html",
+      category: "Career",
+      excerpt: "What to say, when to say it, and how to handle pushback without leaving money on the table.",
+      readTime: "10 min read"
+    },
+    {
+      title: "Yoga for Beginners: Your First 30 Days",
+      url: "post-yoga-for-beginners.html",
+      category: "Wellness",
+      excerpt: "No flexibility required. A practical guide to building a yoga practice that actually sticks.",
+      readTime: "7 min read"
+    },
+    {
+      title: "Cold Showers Changed My Life — Here's the Science",
+      url: "post-cold-shower-benefits.html",
+      category: "Wellness",
+      excerpt: "What actually happens when you take a cold shower every morning. The evidence is more interesting than the hype.",
+      readTime: "6 min read"
+    },
+    {
+      title: "25 Healthy Snacks That Actually Taste Good",
+      url: "post-healthy-snacks.html",
+      category: "Food",
+      excerpt: "Ditch the rice cakes. These snacks are nutritious, satisfying, and genuinely delicious.",
+      readTime: "6 min read"
+    },
+    {
+      title: "Build Your Emergency Fund: A Step-by-Step Plan",
+      url: "post-emergency-fund.html",
+      category: "Money",
+      excerpt: "How much you actually need, where to keep it, and a realistic plan for building your financial safety net.",
+      readTime: "7 min read"
+    },
+    {
+      title: "Build a LinkedIn Profile That Gets You Noticed",
+      url: "post-linkedin-profile.html",
+      category: "Career",
+      excerpt: "Most LinkedIn profiles are forgettable. This guide shows you exactly how to build one that opens doors.",
+      readTime: "7 min read"
+    },
+    {
+      title: "How to Build a Running Habit That Lasts",
+      url: "post-running-habit.html",
+      category: "Wellness",
+      excerpt: "Most people quit running within a month. Here's what the research says about building a durable running habit.",
+      readTime: "8 min read"
+    },
+    {
+      title: "Sunday Meal Prep: Eat Well All Week in 2 Hours",
+      url: "post-meal-prep-sunday.html",
+      category: "Food",
+      excerpt: "The component method that sets you up for a full week of healthy eating without the overwhelm.",
+      readTime: "8 min read"
+    },
+    {
+      title: "Stress Management: 10 Techniques Backed by Science",
+      url: "post-stress-management.html",
+      category: "Mind",
+      excerpt: "Not all stress-relief advice is equal. These 10 techniques have the research to back them up.",
+      readTime: "9 min read"
+    },
+    {
+      title: "Mindfulness at Work: Stay Calm in a Chaotic Office",
+      url: "post-mindfulness-at-work.html",
+      category: "Mind",
+      excerpt: "Practical mindfulness techniques that actually fit into a full workday — no meditation cushion required.",
+      readTime: "6 min read"
+    },
+    {
+      title: "Boost Your Credit Score in 90 Days",
+      url: "post-credit-score.html",
+      category: "Money",
+      excerpt: "The exact steps that move the needle on your credit score — and the mistakes that hold people back.",
+      readTime: "8 min read"
+    },
+    {
+      title: "The Coffee Lover's Guide to Brewing Better at Home",
+      url: "post-coffee-guide.html",
+      category: "Food",
+      excerpt: "Stop paying $7 for mediocre lattes. Exceptional home coffee starts with fresh beans and a burr grinder.",
+      readTime: "7 min read"
+    },
+    {
+      title: "Gut Health 101: Feed Your Microbiome Right",
+      url: "post-gut-health.html",
+      category: "Wellness",
+      excerpt: "What your gut microbiome actually is, why it matters for everything from immunity to mood, and how to nurture it.",
+      readTime: "8 min read"
+    },
+    {
+      title: "4 Breathing Exercises That Calm Your Nervous System",
+      url: "post-breathing-exercises.html",
+      category: "Wellness",
+      excerpt: "Box breathing, 4-7-8, physiological sighs — science-backed techniques that work in minutes.",
+      readTime: "6 min read"
+    },
+    {
+      title: "Remote Work Tips: Thrive Without an Office",
+      url: "post-remote-work-tips.html",
+      category: "Career",
+      excerpt: "The habits, tools, and mindset shifts that separate remote workers who flourish from those who burn out.",
+      readTime: "8 min read"
+    },
+    {
+      title: "Intermittent Fasting: What It Is, What It Isn't",
+      url: "post-intermittent-fasting.html",
+      category: "Food",
+      excerpt: "Separating the hype from the evidence. What the research actually says about weight, metabolism, and health.",
+      readTime: "9 min read"
+    },
+    {
+      title: "10 Side Hustle Ideas You Can Start This Weekend",
+      url: "post-side-hustle-ideas.html",
+      category: "Money",
+      excerpt: "Realistic, proven side hustles ranked by startup cost, time commitment, and earning potential.",
+      readTime: "8 min read"
+    },
+    {
+      title: "The Life-Changing Power of a Daily Journaling Practice",
+      url: "post-journaling-practice.html",
+      category: "Mind",
+      excerpt: "Why journaling works — the psychology, the neuroscience, and how to build a practice that lasts.",
+      readTime: "7 min read"
+    },
+    {
+      title: "Practical Coping Skills for Everyday Anxiety",
+      url: "post-anxiety-coping.html",
+      category: "Mind",
+      excerpt: "Evidence-based tools that actually work — from grounding techniques to cognitive defusion.",
+      readTime: "8 min read"
+    },
+    {
+      title: "Passive Income Streams You Can Build While You Sleep",
+      url: "post-passive-income.html",
+      category: "Money",
+      excerpt: "Realistic strategies — what each requires, what it pays, and how long before you see results.",
+      readTime: "10 min read"
     }
   ];
 
