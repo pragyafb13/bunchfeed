@@ -1373,7 +1373,7 @@ if (sessionStorage.getItem('bf_admin_auth') !== 'true') {
 /* ============================================================
    INIT
    ============================================================ */
-const user = JSON.parse(localStorage.getItem('bf_user') || '{"name":"Admin","email":"admin@travelwise.com"}');
+const user = JSON.parse(localStorage.getItem('bf_user') || '{"name":"Admin","email":"admin@bunchfeed.com"}');
 document.getElementById('user-name').textContent = user.name || 'Admin';
 document.getElementById('user-initial').textContent = (user.name || 'A').charAt(0).toUpperCase();
 renderDashboard();
