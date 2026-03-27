@@ -1764,3 +1764,451 @@ p {
   .stat-item { padding: 22px 18px; }
   .stat-item .stat-number { font-size: 1.8rem; }
 }
+
+/* ==========================================================================
+   VISUAL ENHANCEMENTS — Animations, Highlights, Rich Effects
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shimmer / Highlight Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200,33,42,.18); }
+  50%       { box-shadow: 0 0 0 10px rgba(200,33,42,0); }
+}
+@keyframes float-up {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes badge-pop {
+  0%   { transform: scale(0.7); opacity: 0; }
+  70%  { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes slide-in-right {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes tick-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   Enhanced Post Cards
+   -------------------------------------------------------------------------- */
+.post-card {
+  position: relative;
+  transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease;
+}
+.post-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  background: linear-gradient(135deg, rgba(200,33,42,.06) 0%, transparent 60%);
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+.post-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 48px rgba(0,0,0,.12);
+  border-color: rgba(200,33,42,.15);
+}
+.post-card:hover::after { opacity: 1; }
+
+/* Highlight stripe on card top */
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s cubic-bezier(.22,1,.36,1);
+  z-index: 2;
+}
+.post-card:hover::before { transform: scaleX(1); }
+
+/* Image zoom is smoother */
+.post-card-image img {
+  transition: transform .55s cubic-bezier(.22,1,.36,1);
+}
+.post-card:hover .post-card-image img { transform: scale(1.08); }
+
+/* --------------------------------------------------------------------------
+   Category Tag — Gradient Variants
+   -------------------------------------------------------------------------- */
+.category-tag {
+  background-size: 200% 200%;
+  animation: none;
+  position: relative;
+  overflow: hidden;
+}
+.category-tag::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.2) 50%, transparent 70%);
+  transform: translateX(-100%);
+  transition: transform .6s ease;
+}
+.category-tag:hover::after { transform: translateX(100%); }
+
+.category-tag.travel    { background: linear-gradient(135deg, #2980b9, #1a5276); }
+.category-tag.lifestyle { background: linear-gradient(135deg, #27ae60, #1e8449); }
+.category-tag.tech      { background: linear-gradient(135deg, #8e44ad, #6c3483); }
+.category-tag.health    { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.category-tag.finance   { background: linear-gradient(135deg, #16a085, #117a65); }
+.category-tag.food      { background: linear-gradient(135deg, #e67e22, #ca6f1e); }
+
+/* --------------------------------------------------------------------------
+   Trending Strip — Enhanced
+   -------------------------------------------------------------------------- */
+.trending-strip {
+  background: linear-gradient(90deg, #f7f8fa 0%, #fff 50%, #f7f8fa 100%);
+  border-top: 2px solid rgba(200,33,42,.12);
+  border-bottom: 1px solid var(--border);
+}
+.trending-label {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  border-right: none;
+  letter-spacing: .14em;
+  position: relative;
+}
+.trending-label::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0; bottom: 0;
+  width: 10px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.trending-item {
+  transition: background .2s ease, color .2s ease;
+}
+.trending-item:hover {
+  background: rgba(200,33,42,.05);
+}
+.trending-item:hover .trending-num {
+  color: var(--accent);
+}
+.trending-item:hover .trending-text {
+  color: var(--text-primary);
+}
+.trending-num {
+  transition: color .2s ease;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Hero — Animated gradient overlay
+   -------------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(135deg, #0f1117 0%, #1c1f2e 60%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(200,33,42,.12) 0%, transparent 70%);
+  animation: float-up 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: 20%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(142,68,173,.10) 0%, transparent 70%);
+  animation: float-up 8s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* Hero eyebrow — animated underline */
+.hero-eyebrow {
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-eyebrow::before {
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  -webkit-text-fill-color: initial;
+}
+
+/* Read Article button — pulse */
+.hero .btn-primary {
+  animation: pulse-glow 3s ease-in-out infinite;
+  background: linear-gradient(135deg, var(--accent), #e63946);
+}
+
+/* --------------------------------------------------------------------------
+   Section Labels — Enhanced
+   -------------------------------------------------------------------------- */
+.section-label::before {
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  height: 3px;
+  border-radius: 2px;
+  width: 32px;
+  transition: width .3s ease;
+}
+.section-header:hover .section-label::before { width: 48px; }
+
+/* --------------------------------------------------------------------------
+   Sidebar Widget — Accent border on hover
+   -------------------------------------------------------------------------- */
+.sidebar-widget {
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.sidebar-widget:hover {
+  border-color: rgba(200,33,42,.2);
+  box-shadow: 0 4px 20px rgba(200,33,42,.06);
+}
+.sidebar-widget h4 {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+.sidebar-widget h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 32px; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  border-radius: 2px;
+}
+.sidebar-post-list li a {
+  display: block;
+  padding: 9px 0;
+  font-size: .875rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  transition: color .2s ease, padding-left .2s ease;
+  line-height: 1.4;
+}
+.sidebar-post-list li:last-child a { border-bottom: none; }
+.sidebar-post-list li a:hover {
+  color: var(--accent);
+  padding-left: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Toast — Enhanced
+   -------------------------------------------------------------------------- */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  font-size: .88rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all .35s cubic-bezier(.22,1,.36,1);
+  z-index: 9999;
+  border-left: 3px solid var(--accent);
+  max-width: 360px;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { border-left-color: #27ae60; }
+.toast.error   { border-left-color: var(--accent); }
+
+/* --------------------------------------------------------------------------
+   Count Badge (category hero)
+   -------------------------------------------------------------------------- */
+.count-badge {
+  animation: badge-pop .5s cubic-bezier(.22,1,.36,1) both;
+}
+
+/* --------------------------------------------------------------------------
+   Filter Buttons (Category page)
+   -------------------------------------------------------------------------- */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all .22s ease;
+}
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+  opacity: 0;
+  transition: opacity .22s ease;
+  z-index: -1;
+}
+.filter-btn.active::before { opacity: 1; }
+.filter-btn.active {
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(200,33,42,.28);
+}
+.filter-btn:not(.active):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll-reveal — Smoother with stagger delay calc
+   -------------------------------------------------------------------------- */
+.reveal {
+  transition: opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1);
+}
+.stagger > * {
+  transition: opacity .5s cubic-bezier(.22,1,.36,1), transform .5s cubic-bezier(.22,1,.36,1);
+}
+
+/* --------------------------------------------------------------------------
+   Reading Progress Bar
+   -------------------------------------------------------------------------- */
+.reading-progress {
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm), #8e44ad);
+  height: 3px;
+  transition: width .08s linear;
+}
+
+/* --------------------------------------------------------------------------
+   Article Body — Enhanced typography
+   -------------------------------------------------------------------------- */
+.article-body h2 {
+  position: relative;
+  padding-left: 18px;
+}
+.article-body h2::before {
+  content: '';
+  position: absolute;
+  left: 0; top: .2em; bottom: .2em;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-warm));
+  border-radius: 2px;
+}
+.article-body blockquote {
+  border-left: 4px solid;
+  border-image: linear-gradient(180deg, var(--accent), var(--accent-warm)) 1;
+  background: linear-gradient(90deg, rgba(200,33,42,.04), transparent);
+}
+.article-body table th {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+}
+
+/* --------------------------------------------------------------------------
+   Navbar — Logo animated on hover
+   -------------------------------------------------------------------------- */
+.site-logo span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: filter .2s ease;
+}
+.site-logo:hover span { filter: brightness(1.2); }
+
+/* --------------------------------------------------------------------------
+   Back-to-top floating button
+   -------------------------------------------------------------------------- */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(200,33,42,.35);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s ease, transform .3s cubic-bezier(.22,1,.36,1);
+  z-index: 500;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(200,33,42,.45);
+}
+
+/* --------------------------------------------------------------------------
+   Newsletter Section — Enhanced
+   -------------------------------------------------------------------------- */
+.newsletter-section {
+  background: linear-gradient(135deg, #0f1117 0%, #1c1f2e 50%, #16213e 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: 10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(200,33,42,.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.newsletter-form input:focus {
+  outline: 2px solid rgba(200,33,42,.4);
+  outline-offset: 2px;
+}
+.newsletter-form button {
+  background: linear-gradient(135deg, var(--accent), #e63946);
+  transition: all .25s ease;
+}
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200,33,42,.4);
+}
+
+/* --------------------------------------------------------------------------
+   Category Hero
+   -------------------------------------------------------------------------- */
+.category-hero {
+  background: linear-gradient(135deg, #0f1117 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+.category-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(142,68,173,.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+

@@ -77,9 +77,43 @@
     { title: 'Airport Car Rentals With Turo', cat: 'Travel', href: 'post-turo.html' },
     { title: 'Rest Bedding Buying Guide for Beginners', cat: 'Lifestyle', href: 'post-bedding-guide.html' },
     { title: 'Top 5 Rest Bedding Products You Should Try', cat: 'Lifestyle', href: 'post-bedding-top5.html' },
-    { title: 'How to Travel Southeast Asia on a Budget', cat: 'Travel', href: '#' },
-    { title: 'The Ultimate Guide to Remote Work Travel', cat: 'Lifestyle', href: '#' },
-    { title: 'Choosing the Right Travel Insurance Policy', cat: 'Finance', href: '#' },
+    { title: 'How to Become a Digital Nomad in 2026', cat: 'Travel', href: 'post-digital-nomad.html' },
+    { title: 'Solo Travel in 2026: Safety and Logistics', cat: 'Travel', href: 'post-solo-travel.html' },
+    { title: 'A Month in Bali: Honest Costs and Expectations', cat: 'Travel', href: 'post-bali-month.html' },
+    { title: 'Budget Europe Travel: The Complete Interrail Guide', cat: 'Travel', href: 'post-budget-europe.html' },
+    { title: 'Complete Guide to Machu Picchu', cat: 'Travel', href: 'post-machu-picchu.html' },
+    { title: 'Morocco Travel Guide: Beyond the Tourist Trail', cat: 'Travel', href: 'post-morocco-guide.html' },
+    { title: 'Tokyo on a Budget: Complete Travel Guide', cat: 'Travel', href: 'post-tokyo-guide.html' },
+    { title: 'Europe Interrail: Planning the Perfect Rail Trip', cat: 'Travel', href: 'post-europe-interrail.html' },
+    { title: 'African Safari Guide: Planning and Budgeting', cat: 'Travel', href: 'post-safari-guide.html' },
+    { title: 'Cruise Guide: How to Choose and Book Smart', cat: 'Travel', href: 'post-cruise-guide.html' },
+    { title: 'Travel Fitness: Staying in Shape on the Road', cat: 'Travel', href: 'post-travel-fitness.html' },
+    { title: 'Managing Jet Lag: Science-Backed Strategies', cat: 'Travel', href: 'post-jet-lag.html' },
+    { title: 'Travel Diet: Eating Well Without Obsessing', cat: 'Travel', href: 'post-travel-diet.html' },
+    { title: 'Travel Hacks That Actually Save Money', cat: 'Travel', href: 'post-travel-hacks.html' },
+    { title: 'Travel Credit Cards Worth Carrying in 2026', cat: 'Finance', href: 'post-travel-credit-cards.html' },
+    { title: 'Points and Miles: How to Earn and Use Them', cat: 'Finance', href: 'post-points-miles.html' },
+    { title: 'Saving for a House Deposit: A Realistic Timeline', cat: 'Finance', href: 'post-house-saving.html' },
+    { title: 'Freelance Finance: Managing Irregular Income', cat: 'Finance', href: 'post-freelance-finance.html' },
+    { title: 'Building an Emergency Fund: How Much Is Enough', cat: 'Finance', href: 'post-emergency-fund.html' },
+    { title: 'Building a Side Income: What Works and What Doesn\'t', cat: 'Finance', href: 'post-side-income.html' },
+    { title: 'Building a Capsule Wardrobe That Actually Works', cat: 'Lifestyle', href: 'post-capsule-wardrobe.html' },
+    { title: 'Coffee Guide: Brewing Methods Explained', cat: 'Lifestyle', href: 'post-coffee-guide.html' },
+    { title: 'The Perfect Home Office Setup', cat: 'Lifestyle', href: 'post-home-office.html' },
+    { title: 'The Morning Routine That Actually Works', cat: 'Lifestyle', href: 'post-morning-routine.html' },
+    { title: 'Decluttering Your Home and Keeping It That Way', cat: 'Lifestyle', href: 'post-declutter.html' },
+    { title: 'Minimalism: What It Actually Means in Practice', cat: 'Lifestyle', href: 'post-minimalism.html' },
+    { title: 'Building a Reading Habit That Sticks', cat: 'Lifestyle', href: 'post-reading-habit.html' },
+    { title: 'Bedding Guide for Better Sleep', cat: 'Lifestyle', href: 'post-bedding-guide.html' },
+    { title: 'Optimising Sleep for Performance', cat: 'Health', href: 'post-sleep-optimization.html' },
+    { title: 'Stress Management: Evidence-Based Techniques', cat: 'Health', href: 'post-stress-management.html' },
+    { title: 'Meal Prep Guide: Eat Well With Less Effort', cat: 'Health', href: 'post-meal-prep.html' },
+    { title: 'The Best AI Tools of 2026', cat: 'Tech', href: 'post-ai-tools-2026.html' },
+    { title: 'How to Build a PC in 2026: Complete Component Guide', cat: 'Tech', href: 'post-build-pc-2026.html' },
+    { title: 'Password Security in 2026: Stop Getting It Wrong', cat: 'Tech', href: 'post-password-security.html' },
+    { title: 'Learning to Code in 2026: The Honest Beginner\'s Roadmap', cat: 'Tech', href: 'post-coding-beginners.html' },
+    { title: 'Building a Fast, Secure Home Network', cat: 'Tech', href: 'post-home-network.html' },
+    { title: 'Choosing a Smartphone in 2026: What Actually Matters', cat: 'Tech', href: 'post-smartphone-guide.html' },
   ];
 
   function renderSearchResults(query) {
@@ -321,4 +355,31 @@
     imgObserver.observe(img);
   });
 
+  /* ------------------------------------------------------------------
+     Back-to-top button
+  ------------------------------------------------------------------ */
+  const bttBtn = document.createElement('button');
+  bttBtn.className = 'back-to-top';
+  bttBtn.setAttribute('aria-label', 'Back to top');
+  bttBtn.innerHTML = '&#8679;';
+  document.body.appendChild(bttBtn);
+
+  window.addEventListener('scroll', () => {
+    bttBtn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  bttBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ------------------------------------------------------------------
+     Sign In link — redirect to login page
+  ------------------------------------------------------------------ */
+  document.querySelectorAll('.nav-signin').forEach((el) => {
+    if (!el.getAttribute('href') || el.getAttribute('href') === '#') {
+      el.href = 'login.html';
+    }
+  });
+
 })();
+
