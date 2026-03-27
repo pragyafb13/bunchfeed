@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About ThriveMag — our story, mission, and the team behind the publication.">
+  <title>About — ThriveMag</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="reading-progress"></div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Thrive<span>Mag</span></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="category.html">Articles</a>
+      <a href="category.html?cat=wellness">Wellness</a>
+      <a href="category.html?cat=career">Career</a>
+      <a href="category.html?cat=food">Food</a>
+      <a href="category.html?cat=mind">Mind</a>
+      <a href="category.html?cat=money">Money</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="header-search-btn" id="header-search-btn" aria-label="Search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div id="nav-auth">
+        <div class="header-auth-links">
+          <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
+          <a href="sign-up.html" class="btn btn-primary btn-sm">Join Free</a>
+        </div>
+      </div>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="category.html">All Articles</a>
+  <a href="category.html?cat=wellness">Wellness</a>
+  <a href="category.html?cat=career">Career</a>
+  <a href="category.html?cat=food">Food</a>
+  <a href="category.html?cat=mind">Mind</a>
+  <a href="category.html?cat=money">Money</a>
+  <a href="about.html">About</a>
+  <a href="sign-in.html">Sign In</a>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="search-input" placeholder="Search articles, topics…" autocomplete="off">
+    </div>
+    <div class="search-hint"><span><kbd>Esc</kbd> to close</span></div>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>About ThriveMag</h1>
+    <p>We believe intentional living isn't a luxury — it's a practice. ThriveMag exists to give you the ideas, tools, and inspiration to build a life that actually fits.</p>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section">
+  <div class="section-inner">
+    <div class="grid-2" style="align-items:center;gap:4rem">
+      <div class="reveal-left">
+        <span style="font-size:0.8125rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent)">Our Story</span>
+        <h2 style="margin-top:0.75rem;margin-bottom:1.5rem">Born from a Simple Frustration</h2>
+        <p>ThriveMag was founded in 2023 by a small team of writers and editors who were tired of the same two extremes in lifestyle media: either empty inspiration ("just believe in yourself!") or overwhelming, anxiety-inducing productivity porn ("wake up at 4am and hustle forever").</p>
+        <p>We wanted something in the middle — thoughtful, evidence-backed writing that helps real people make meaningful changes without overhauling their entire lives overnight.</p>
+        <p>What started as a newsletter with 200 subscribers has grown into a publication read by more than 500,000 people every month. Our readers are professionals in their 20s, 30s, and 40s who care deeply about health, work, money, and meaning — and want practical guidance to navigate all of it.</p>
+        <p>We cover five interconnected areas of life — Wellness, Career, Food, Mind, and Money — because we believe these things don't exist in silos. When your sleep is off, your focus suffers. When your finances are chaotic, everything feels harder. ThriveMag is where those connections get explored honestly.</p>
+      </div>
+      <div class="reveal-right">
+        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80&auto=format&fit=crop"
+             alt="Intentional living and wellness"
+             style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section" style="background:var(--bg-secondary);padding:3rem 0">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="500" data-suffix="K+">0</span>
+        <span class="stat-desc">Monthly Readers</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="120" data-suffix="+">0</span>
+        <span class="stat-desc">Articles Published</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="3" data-suffix=" Yrs">0</span>
+        <span class="stat-desc">Online</span>
+      </div>
+      <div class="stat-item reveal">
+        <span class="stat-num" data-count="12" data-suffix="">0</span>
+        <span class="stat-desc">Contributors</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>Meet the Team</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card stagger">
+        <div class="team-avatar" style="background:var(--primary)">SC</div>
+        <h4>Sarah Chen</h4>
+        <div class="role">Lead Editor</div>
+        <p>Former tech journalist turned lifestyle editor. Sarah leads ThriveMag's editorial direction with a focus on career and modern work culture. She's obsessed with systems thinking and great coffee.</p>
+      </div>
+      <div class="team-card stagger">
+        <div class="team-avatar" style="background:var(--cat-wellness)">MP</div>
+        <h4>Maya Patel</h4>
+        <div class="role">Wellness Editor</div>
+        <p>Certified health coach and longtime writer on mind, body, and habits. Maya brings evidence-based rigour to wellness topics and has a personal vendetta against bad sleep advice.</p>
+      </div>
+      <div class="team-card stagger">
+        <div class="team-avatar" style="background:var(--cat-money)">JR</div>
+        <h4>James Rivera</h4>
+        <div class="role">Finance Editor</div>
+        <p>Former financial planner who now writes about money for normal humans. James believes personal finance should be empowering, not intimidating, and his writing reflects that approach.</p>
+      </div>
+      <div class="team-card stagger">
+        <div class="team-avatar" style="background:var(--cat-food)">LT</div>
+        <h4>Lin Torres</h4>
+        <div class="role">Food Editor</div>
+        <p>Self-taught cook, food scientist, and sustainability advocate. Lin writes about food that's both nourishing and genuinely delicious — because she refuses to believe you have to choose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--bg-secondary)">
+  <div class="section-inner">
+    <div class="section-header" style="margin-bottom:2.5rem">
+      <h2>What We Stand For</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-item reveal">
+        <div class="value-icon">&#128270;</div>
+        <h4>Evidence Over Hype</h4>
+        <p>Every claim we make has to be backed by research, real experience, or both. We don't chase trends — we investigate them. If the science doesn't support it, we say so.</p>
+      </div>
+      <div class="value-item reveal">
+        <div class="value-icon">&#9997;&#65039;</div>
+        <h4>Depth Over Clickbait</h4>
+        <p>We write long-form pieces because real change requires real understanding. You won't find listicles with empty advice here — just thoroughly researched, well-written articles.</p>
+      </div>
+      <div class="value-item reveal">
+        <div class="value-icon">&#127775;</div>
+        <h4>Practical Over Aspirational</h4>
+        <p>We respect your time and intelligence. Our articles give you actionable steps you can take this week, not vague lifestyle goals that require a complete personality transplant.</p>
+      </div>
+      <div class="value-item reveal">
+        <div class="value-icon">&#9764;&#65039;</div>
+        <h4>Honest About Tradeoffs</h4>
+        <p>Living intentionally sometimes means making hard choices. We don't pretend you can have everything — we help you figure out what matters most and build toward that.</p>
+      </div>
+      <div class="value-item reveal">
+        <div class="value-icon">&#127757;</div>
+        <h4>Inclusive by Default</h4>
+        <p>Our audience is global and diverse. We write for people at different stages of life, with different incomes, bodies, and circumstances. We don't assume a default.</p>
+      </div>
+      <div class="value-item reveal">
+        <div class="value-icon">&#128214;</div>
+        <h4>Independent Voice</h4>
+        <p>ThriveMag is reader-supported and editorially independent. We don't take money from brands to write favorably about their products. Our opinions are genuinely ours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background:var(--bg-dark);padding:5rem 0">
+  <div class="section-inner text-center">
+    <div class="reveal">
+      <h2 style="color:#fff;margin-bottom:1rem">Ready to Live More Intentionally?</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:1.0625rem;max-width:500px;margin:0 auto 2rem">Start with our most-read articles or join 500,000+ readers who get our weekly digest.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="category.html" class="btn btn-primary btn-lg">Read the Articles</a>
+        <a href="sign-up.html" class="btn btn-white btn-lg">Join Free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">Thrive<span>Mag</span></a>
+        <p>Your guide to living with intention — wellness, career, food, mind, and money.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html?cat=wellness">Wellness</a></li>
+          <li><a href="category.html?cat=career">Career</a></li>
+          <li><a href="category.html?cat=food">Food</a></li>
+          <li><a href="category.html?cat=mind">Mind</a></li>
+          <li><a href="category.html?cat=money">Money</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sign-in.html">Sign In</a></li>
+          <li><a href="sign-up.html">Join Free</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.5);margin-bottom:0">Weekly articles in your inbox.</p>
+        <div class="footer-newsletter-input">
+          <input type="email" placeholder="Your email">
+          <button class="btn btn-primary btn-sm">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ThriveMag. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast-container" class="toast-container"></div>
+<script src="auth.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
