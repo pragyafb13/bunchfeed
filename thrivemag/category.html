@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all ThriveMag articles on wellness, career, food, mind, and money.">
+  <title>All Articles — ThriveMag</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="reading-progress"></div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Thrive<span>Mag</span></a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="category.html" class="active">Articles</a>
+      <a href="category.html?cat=wellness">Wellness</a>
+      <a href="category.html?cat=career">Career</a>
+      <a href="category.html?cat=food">Food</a>
+      <a href="category.html?cat=mind">Mind</a>
+      <a href="category.html?cat=money">Money</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="header-search-btn" id="header-search-btn" aria-label="Search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div id="nav-auth">
+        <div class="header-auth-links">
+          <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
+          <a href="sign-up.html" class="btn btn-primary btn-sm">Join Free</a>
+        </div>
+      </div>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="category.html">All Articles</a>
+  <a href="category.html?cat=wellness">Wellness</a>
+  <a href="category.html?cat=career">Career</a>
+  <a href="category.html?cat=food">Food</a>
+  <a href="category.html?cat=mind">Mind</a>
+  <a href="category.html?cat=money">Money</a>
+  <a href="about.html">About</a>
+  <a href="sign-in.html">Sign In</a>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="search-input" placeholder="Search articles, topics…" autocomplete="off">
+    </div>
+    <div class="search-hint"><span><kbd>Esc</kbd> to close</span></div>
+    <div id="search-results"></div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Explore Articles</h1>
+    <p>Deep dives into wellness, career, food, mind, and money — written to help you live with intention.</p>
+    <span class="post-count-badge">10 Articles &amp; Growing</span>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
+  <section class="section">
+    <div class="section-inner">
+      <!-- Category Filters -->
+      <div class="category-filters" id="category-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn cat-wellness" data-category="wellness">Wellness</button>
+        <button class="filter-btn cat-career" data-category="career">Career</button>
+        <button class="filter-btn cat-food" data-category="food">Food</button>
+        <button class="filter-btn cat-mind" data-category="mind">Mind</button>
+        <button class="filter-btn cat-money" data-category="money">Money</button>
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="grid-3" id="posts-grid">
+
+        <article class="post-card stagger" data-category="career">
+          <div class="post-card-img">
+            <a href="post-thriving-at-work.html">
+              <img data-src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Office workspace">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=career" class="cat-tag career">Career</a>
+              <span class="read-time">8 min read</span>
+            </div>
+            <h3><a href="post-thriving-at-work.html">Thriving at Work: The Modern Professional's Playbook</a></h3>
+            <p class="excerpt">Navigate hustle culture, protect your energy, and build a career that actually lasts without burning out.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">SC</div>
+              <span class="author-name-sm">Sarah Chen</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Jan 15</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="wellness">
+          <div class="post-card-img">
+            <a href="post-morning-rituals.html">
+              <img data-src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Morning coffee">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=wellness" class="cat-tag wellness">Wellness</a>
+              <span class="read-time">6 min read</span>
+            </div>
+            <h3><a href="post-morning-rituals.html">Morning Rituals That Actually Stick</a></h3>
+            <p class="excerpt">Science-backed morning habits that transform your energy, focus, and mood — without waking up at 5am.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">MP</div>
+              <span class="author-name-sm">Maya Patel</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Jan 20</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="money">
+          <div class="post-card-img">
+            <a href="post-mind-your-money.html">
+              <img data-src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Finance planning">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=money" class="cat-tag money">Money</a>
+              <span class="read-time">10 min read</span>
+            </div>
+            <h3><a href="post-mind-your-money.html">Mind Your Money: A Beginner's Guide to Financial Clarity</a></h3>
+            <p class="excerpt">Stop avoiding your bank account. Budgeting, saving, and investing in plain language.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">JR</div>
+              <span class="author-name-sm">James Rivera</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Feb 1</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="food">
+          <div class="post-card-img">
+            <a href="post-plant-based-meals.html">
+              <img data-src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Plant-based food">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=food" class="cat-tag food">Food</a>
+              <span class="read-time">7 min read</span>
+            </div>
+            <h3><a href="post-plant-based-meals.html">Plant-Based Meals That Won't Bore You</a></h3>
+            <p class="excerpt">Vibrant, satisfying plant-based cooking for people who actually love food — no bland salads required.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">LT</div>
+              <span class="author-name-sm">Lin Torres</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Feb 10</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="mind">
+          <div class="post-card-img">
+            <a href="post-digital-detox.html">
+              <img data-src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Meditation">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=mind" class="cat-tag mind">Mind</a>
+              <span class="read-time">6 min read</span>
+            </div>
+            <h3><a href="post-digital-detox.html">The Digital Detox: Reclaiming Your Attention</a></h3>
+            <p class="excerpt">Your phone is designed to be addictive. Here's how to take back your focus, one intentional choice at a time.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">MP</div>
+              <span class="author-name-sm">Maya Patel</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Feb 18</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="wellness">
+          <div class="post-card-img">
+            <a href="post-strength-training.html">
+              <img data-src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Strength training fitness">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=wellness" class="cat-tag wellness">Wellness</a>
+              <span class="read-time">8 min read</span>
+            </div>
+            <h3><a href="post-strength-training.html">Strength Training for the Time-Starved</a></h3>
+            <p class="excerpt">Build real strength in just 3 days a week with compound movements that deliver maximum results.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">AM</div>
+              <span class="author-name-sm">Alex Morgan</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Feb 25</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="career">
+          <div class="post-card-img">
+            <a href="post-freelance-blueprint.html">
+              <img data-src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Freelance productivity">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=career" class="cat-tag career">Career</a>
+              <span class="read-time">12 min read</span>
+            </div>
+            <h3><a href="post-freelance-blueprint.html">The Freelance Blueprint: Going Independent Without the Fear</a></h3>
+            <p class="excerpt">Clients, rates, contracts, and freelance finances — a complete guide for the aspiring independent.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">JR</div>
+              <span class="author-name-sm">James Rivera</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Mar 3</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="food">
+          <div class="post-card-img">
+            <a href="post-fermented-foods.html">
+              <img data-src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Fermented foods">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=food" class="cat-tag food">Food</a>
+              <span class="read-time">7 min read</span>
+            </div>
+            <h3><a href="post-fermented-foods.html">Fermented Foods: The Gut Health Revolution</a></h3>
+            <p class="excerpt">How kimchi, kefir, and kombucha are transforming what we understand about wellness and the gut-brain connection.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">LT</div>
+              <span class="author-name-sm">Lin Torres</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Mar 10</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="mind">
+          <div class="post-card-img">
+            <a href="post-sleep-science.html">
+              <img data-src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Sleep and rest">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=mind" class="cat-tag mind">Mind</a>
+              <span class="read-time">9 min read</span>
+            </div>
+            <h3><a href="post-sleep-science.html">The Science of Sleep: Why 8 Hours Isn't Enough</a></h3>
+            <p class="excerpt">Sleep quality, circadian rhythms, and the evening routines that help your brain actually restore itself overnight.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">MP</div>
+              <span class="author-name-sm">Maya Patel</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Mar 15</span>
+          </div>
+        </article>
+
+        <article class="post-card stagger" data-category="money">
+          <div class="post-card-img">
+            <a href="post-invest-twenties.html">
+              <img data-src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80&auto=format&fit=crop"
+                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Investing">
+            </a>
+          </div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <a href="category.html?cat=money" class="cat-tag money">Money</a>
+              <span class="read-time">11 min read</span>
+            </div>
+            <h3><a href="post-invest-twenties.html">Investing in Your 20s: The Unfair Advantage</a></h3>
+            <p class="excerpt">Compound interest, index funds, Roth IRAs — the financial edge that only starts when you start.</p>
+          </div>
+          <div class="post-card-footer">
+            <div class="author-mini">
+              <div class="author-avatar-sm">JR</div>
+              <span class="author-name-sm">James Rivera</span>
+            </div>
+            <span style="font-size:0.8125rem;color:var(--text-muted)">Mar 20</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div class="newsletter-inner">
+    <div class="reveal">
+      <h2>Never Miss an Article</h2>
+      <p>Get our best long-form articles delivered to your inbox every Tuesday morning.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="newsletter-disclaimer">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="footer-logo">Thrive<span>Mag</span></a>
+        <p>Your guide to living with intention — wellness, career, food, mind, and money.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html?cat=wellness">Wellness</a></li>
+          <li><a href="category.html?cat=career">Career</a></li>
+          <li><a href="category.html?cat=food">Food</a></li>
+          <li><a href="category.html?cat=mind">Mind</a></li>
+          <li><a href="category.html?cat=money">Money</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sign-in.html">Sign In</a></li>
+          <li><a href="sign-up.html">Join Free</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,0.5);margin-bottom:0">Weekly articles in your inbox.</p>
+        <div class="footer-newsletter-input">
+          <input type="email" placeholder="Your email">
+          <button class="btn btn-primary btn-sm">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ThriveMag. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast-container" class="toast-container"></div>
+<script src="auth.js" defer></script>
+<script src="script.js" defer></script>
+<script defer>
+  // Pre-select category from URL param
+  document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    if (cat) {
+      const btn = document.querySelector(`.filter-btn.cat-${cat}`);
+      if (btn) {
+        setTimeout(() => btn.click(), 100);
+      }
+    }
+  });
+</script>
+</body>
+</html>

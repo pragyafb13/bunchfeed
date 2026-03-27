@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your ThriveMag account.">
+  <title>Sign In — ThriveMag</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+    <div class="auth-logo">
+      <a href="index.html" class="logo-text">Thrive<span>Mag</span></a>
+      <span class="tagline">Live Intentionally</span>
+    </div>
+
+    <h1>Welcome back</h1>
+    <p class="auth-subtitle">Sign in to your account to continue.</p>
+
+    <div class="auth-demo">
+      <strong>Demo credentials:</strong><br>
+      Email: <code>admin@thrivemag.com</code><br>
+      Password: <code>admin123</code>
+    </div>
+
+    <div class="auth-error" id="auth-error" role="alert"></div>
+
+    <form id="sign-in-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-input"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        >
+        <span class="form-error" id="email-error">Please enter a valid email address.</span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input
+          type="password"
+          class="form-input"
+          id="password"
+          name="password"
+          placeholder="Your password"
+          autocomplete="current-password"
+          required
+        >
+        <span class="form-error" id="password-error">Please enter your password.</span>
+      </div>
+
+      <a href="#" class="auth-forgot">Forgot your password?</a>
+
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.875rem" id="submit-btn">
+        Sign In
+      </button>
+    </form>
+
+    <hr class="auth-divider">
+
+    <p class="auth-footer">
+      Don't have an account? <a href="sign-up.html">Sign Up — it's free</a>
+    </p>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+  <script src="auth.js" defer></script>
+  <script src="script.js" defer></script>
+  <script>
+    // If already logged in, redirect home
+    document.addEventListener('DOMContentLoaded', function () {
+      if (ThriveMag.auth.isLoggedIn()) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      const form = document.getElementById('sign-in-form');
+      const errorBox = document.getElementById('auth-error');
+      const submitBtn = document.getElementById('submit-btn');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const email = form.email.value.trim();
+        const password = form.password.value;
+
+        // Clear previous errors
+        errorBox.classList.remove('visible');
+        errorBox.textContent = '';
+
+        // Basic validation
+        let valid = true;
+        if (!email) {
+          document.getElementById('email-error').classList.add('visible');
+          valid = false;
+        } else {
+          document.getElementById('email-error').classList.remove('visible');
+        }
+        if (!password) {
+          document.getElementById('password-error').classList.add('visible');
+          valid = false;
+        } else {
+          document.getElementById('password-error').classList.remove('visible');
+        }
+        if (!valid) return;
+
+        // Attempt login
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Signing in…';
+
+        setTimeout(function () {
+          const result = ThriveMag.auth.login(email, password);
+
+          if (result.success) {
+            window.location.href = 'index.html';
+          } else {
+            errorBox.textContent = result.error;
+            errorBox.classList.add('visible');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Sign In';
+          }
+        }, 400);
+      });
+    });
+  </script>
+</body>
+</html>
