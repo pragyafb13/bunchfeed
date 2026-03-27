@@ -475,11 +475,11 @@
       submitBtn.disabled = true;
 
       setTimeout(() => {
-        const isAdmin = email === 'admin@bunchfeed.com' && password === 'admin123';
+        const isAdmin = email.toLowerCase() === 'admin@bunchfeed.com' && password === 'admin123';
 
         if (isAdmin) {
-          sessionStorage.setItem('bf_admin_auth', 'true');
-          localStorage.setItem('bf_user', JSON.stringify({ email, name: 'Admin' }));
+          localStorage.setItem('bf_admin_auth', 'true');
+          localStorage.setItem('bf_user', JSON.stringify({ email: 'admin@bunchfeed.com', name: 'Admin' }));
           window.location.href = 'admin.html';
         } else {
           localStorage.setItem('bf_user', JSON.stringify({ email, name: email.split('@')[0] }));

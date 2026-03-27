@@ -1358,7 +1358,7 @@ function toast(msg, isError = false) {
 }
 
 function logout() {
-  sessionStorage.removeItem('bf_admin_auth');
+  localStorage.removeItem('bf_admin_auth');
   localStorage.removeItem('bf_user');
   window.location.href = 'login.html';
 }
@@ -1366,7 +1366,7 @@ function logout() {
 /* ============================================================
    AUTH GUARD
    ============================================================ */
-if (sessionStorage.getItem('bf_admin_auth') !== 'true') {
+if (localStorage.getItem('bf_admin_auth') !== 'true') {
   window.location.replace('login.html');
 }
 
