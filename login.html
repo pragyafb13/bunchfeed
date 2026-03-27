@@ -471,16 +471,22 @@
 
       if (!valid) return;
 
-      // Simulate login
       submitBtn.textContent = 'Signing in...';
       submitBtn.disabled = true;
 
       setTimeout(() => {
-        // Store session
-        localStorage.setItem('bf_user', JSON.stringify({ email, name: email.split('@')[0] }));
-        form.style.display = 'none';
-        loginSuccess.style.display = 'block';
-        setTimeout(() => { window.location.href = 'index.html'; }, 2500);
+        const isAdmin = email === 'admin@travelwise.com' && password === 'admin123';
+
+        if (isAdmin) {
+          sessionStorage.setItem('bf_admin_auth', 'true');
+          localStorage.setItem('bf_user', JSON.stringify({ email, name: 'Admin' }));
+          window.location.href = 'admin.html';
+        } else {
+          localStorage.setItem('bf_user', JSON.stringify({ email, name: email.split('@')[0] }));
+          form.style.display = 'none';
+          loginSuccess.style.display = 'block';
+          setTimeout(() => { window.location.href = 'index.html'; }, 2500);
+        }
       }, 1400);
     });
 

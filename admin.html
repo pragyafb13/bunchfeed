@@ -1358,14 +1358,22 @@ function toast(msg, isError = false) {
 }
 
 function logout() {
+  sessionStorage.removeItem('bf_admin_auth');
   localStorage.removeItem('bf_user');
   window.location.href = 'login.html';
 }
 
 /* ============================================================
+   AUTH GUARD
+   ============================================================ */
+if (sessionStorage.getItem('bf_admin_auth') !== 'true') {
+  window.location.replace('login.html');
+}
+
+/* ============================================================
    INIT
    ============================================================ */
-const user = JSON.parse(localStorage.getItem('bf_user') || '{"name":"Admin","email":"admin@bunchfeed.com"}');
+const user = JSON.parse(localStorage.getItem('bf_user') || '{"name":"Admin","email":"admin@travelwise.com"}');
 document.getElementById('user-name').textContent = user.name || 'Admin';
 document.getElementById('user-initial').textContent = (user.name || 'A').charAt(0).toUpperCase();
 renderDashboard();
