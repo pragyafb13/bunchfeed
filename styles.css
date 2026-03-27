@@ -771,14 +771,18 @@ p {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 0;
+  display: flex;
+  align-items: stretch;
 }
 
 .trending-inner {
   display: flex;
   align-items: stretch;
-  overflow-x: auto;
+  overflow-x: hidden;
   gap: 0;
   scrollbar-width: none;
+  flex: 1;
+  min-width: 0;
 }
 .trending-inner::-webkit-scrollbar { display: none; }
 
@@ -1893,15 +1897,7 @@ p {
   font-weight: 800;
   border-right: none;
   letter-spacing: .14em;
-  position: relative;
-}
-.trending-label::after {
-  content: '';
-  position: absolute;
-  right: -10px;
-  top: 0; bottom: 0;
-  width: 10px;
-  background: linear-gradient(90deg, var(--accent), transparent);
+  flex-shrink: 0;
 }
 .trending-item {
   transition: background .2s ease, color .2s ease;
