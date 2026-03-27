@@ -1942,11 +1942,31 @@ p {
   opacity: .82;
 }
 
-.cat-card--travel    { background: linear-gradient(135deg, #2980b9, #1a5276); }
-.cat-card--lifestyle { background: linear-gradient(135deg, #27ae60, #1a7a43); }
-.cat-card--finance   { background: linear-gradient(135deg, #16a085, #0d6b59); }
-.cat-card--health    { background: linear-gradient(135deg, #e74c3c, #a93226); }
-.cat-card--tech      { background: linear-gradient(135deg, #8e44ad, #6c3483); }
+.cat-card--travel {
+  background:
+    linear-gradient(160deg, rgba(41,128,185,.80) 0%, rgba(26,82,118,.90) 100%),
+    url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=70&auto=format&fit=crop') center/cover no-repeat;
+}
+.cat-card--lifestyle {
+  background:
+    linear-gradient(160deg, rgba(39,174,96,.80) 0%, rgba(26,122,67,.90) 100%),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=70&auto=format&fit=crop') center/cover no-repeat;
+}
+.cat-card--finance {
+  background:
+    linear-gradient(160deg, rgba(22,160,133,.80) 0%, rgba(13,107,89,.90) 100%),
+    url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=70&auto=format&fit=crop') center/cover no-repeat;
+}
+.cat-card--health {
+  background:
+    linear-gradient(160deg, rgba(231,76,60,.80) 0%, rgba(169,50,38,.90) 100%),
+    url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=70&auto=format&fit=crop') center/cover no-repeat;
+}
+.cat-card--tech {
+  background:
+    linear-gradient(160deg, rgba(142,68,173,.80) 0%, rgba(108,52,131,.90) 100%),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70&auto=format&fit=crop') center/cover no-repeat;
+}
 
 @media (max-width: 900px) {
   .cat-grid { grid-template-columns: repeat(3, 1fr); }
