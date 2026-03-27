@@ -237,31 +237,41 @@
   }
 
   /* ------------------------------------------------------------------
-     Trending strip auto-scroll
+     Trending strip — infinite marquee loop
   ------------------------------------------------------------------ */
   const trendingInner = document.querySelector('.trending-inner');
   if (trendingInner) {
-    let scrollDir = 1;
-    let paused = false;
+    // Clone all scrollable items (not the label) and append for seamless loop
+    const label = trendingInner.querySelector('.trending-label');
+    const items  = Array.from(trendingInner.querySelectorAll('.trending-item'));
+    items.forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      trendingInner.appendChild(clone);
+    });
+
+    let paused   = false;
+    let pos      = 0;
+    const speed  = 1.4; // px per frame (~84px/sec at 60fps)
+
+    // Half the scrollWidth is the original content width (before clones)
+    const getHalfWidth = () => trendingInner.scrollWidth / 2;
+
+    const tick = () => {
+      if (!paused) {
+        pos += speed;
+        if (pos >= getHalfWidth()) pos -= getHalfWidth(); // seamless loop
+        trendingInner.scrollLeft = pos;
+      }
+      requestAnimationFrame(tick);
+    };
 
     trendingInner.addEventListener('mouseenter', () => (paused = true));
     trendingInner.addEventListener('mouseleave', () => (paused = false));
+    trendingInner.addEventListener('touchstart',  () => (paused = true),  { passive: true });
+    trendingInner.addEventListener('touchend',    () => (paused = false), { passive: true });
 
-    const autoScroll = () => {
-      if (!paused) {
-        trendingInner.scrollLeft += scrollDir * 0.6;
-        if (
-          trendingInner.scrollLeft + trendingInner.clientWidth >= trendingInner.scrollWidth - 2
-        ) {
-          scrollDir = -1;
-        }
-        if (trendingInner.scrollLeft <= 0) {
-          scrollDir = 1;
-        }
-      }
-      requestAnimationFrame(autoScroll);
-    };
-    requestAnimationFrame(autoScroll);
+    requestAnimationFrame(tick);
   }
 
   /* ------------------------------------------------------------------
